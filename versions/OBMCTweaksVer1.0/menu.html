@@ -1,0 +1,82 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                background-image: url("images/background.png");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        </style>
+
+        <title>
+            OBMC Tweaks | Settings
+        </title>
+
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body data-bs-theme="dark">
+        <div>
+            <div class="container-fluid bg-dark pt-4 border border-5 border-start-0 border-top-0 border-end-0"> 
+                <h1 class="fs-1 fw-bold text-center container mx-auto mb-2">OBMC Tweaks</h1>
+                <h1 class="fs-6 fst-italic text-center text-secondary container mx-auto mt-2">Created by DimensionReset</h1>
+                <h1 class="fs-6 fst-italic text-start text-secondary container m-2">
+                    <span class="extension-version"></span> <!-- Version Number -->
+                </h1>
+            </div>
+
+            <div>
+                <h1 class="text-muted fs-4 fw-bold text-center container mx-auto my-2">Settings Menu</h1>
+                <hr class="w-50 mx-auto">
+            </div>
+
+            <div>
+                <h1 class="text-muted fs-4 fw-bold text-center container mx-auto my-2">Credits</h1>
+
+                <p class="text-center mt-4">
+                    <b>DimensionReset</b><br> - Made Almost Everything<br><br>
+                    <b>applepi</b><br> - Created Logo (Caterpillar)<br><br>
+                </p>
+            </div>
+        </div>
+
+        <div class="logo-container" id="caterpillar" data-bs-toggle="tooltip"> <!-- Caterpillar -->
+            <img src="images/extension-logo.png" class="logo-img">
+        </div>
+
+        <style>
+            .logo-container {
+                position: fixed;
+                bottom: -18px;  /* distance from the bottom of the viewport */
+                left: 5%;
+                transform: translateX(-50%); /*  centered */
+            }
+
+            .logo-img {
+                width: 80px;  /* adjust size */
+                height: auto;
+            }
+        </style>
+
+        <!-- SCRIPTS -->
+        
+            <!-- Lists -->
+        <script src="scripts/lists/default-settings.js"></script>
+        <script src="scripts/lists/caterpillar-dialog.js"></script>
+
+            <!-- Helpers -->
+        <script src="scripts/helper/storage-handler.js" type="module"></script>
+
+            <!-- Main -->
+        <script src="scripts/internal/settings-handler.js" type="module"></script>
+        <script src="scripts/internal/caterpillar-handler.js"></script>
+
+            <!-- BS -->
+        <script src="scripts/internal/tooltip-handler.js"></script>
+    </body>
+</html>
