@@ -11,8 +11,8 @@ Before you begin, please note that **Side A** of step one is for those who use t
      - If you're in need of custom backgrounds, you can download some [**here**](https://ko-fi.com/i/IP5P31VV2CW).  
 
 ## Additional Information
-### **License**  
-*License under the [MIT](https://github.com/DimensionReset/OBMC-Tweaks/blob/main/LICENSE) license.*  
+### **License Details**  
+*OBMC Tweaks is licensed under the [MIT](https://github.com/DimensionReset/OBMC-Tweaks/blob/main/LICENSE) license.*  
   
 ### **Privacy Policy**  
 OBMC Tweaks does not collect or send any personal data to external servers. All data is
