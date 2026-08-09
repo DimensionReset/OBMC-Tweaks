@@ -12,8 +12,8 @@ Before you begin, please note that **Side A** of step one is for those who use t
 
 ## Additional Information
 ### **License Details**  
-*OBMC Tweaks is licensed under the [MIT](https://github.com/DimensionReset/OBMC-Tweaks/blob/main/LICENSE) license.*  
+OBMC Tweaks is licensed under the [**MIT**](https://github.com/DimensionReset/OBMC-Tweaks/blob/main/LICENSE) license.  
   
 ### **Privacy Policy**  
 OBMC Tweaks does not collect or send any personal data to external servers. All data is
-stored locally on your device. *View the full privacy policy [here](https://dimensionreset.github.io/OBMC-Tweaks/)*.
+stored locally on your device. View the full privacy policy [**here**](https://dimensionreset.github.io/OBMC-Tweaks/).
