@@ -5,11 +5,11 @@
 Step One Side A is for those who use their personal accounts on the school platform. Side B is for those who can't install the extension normally due to administrative restrictions:
   1. Add the browser extension to your account.  
      1A. Install the extension via the [Chrome Web Store page](https://chromewebstore.google.com/detail/deakjdfjninnhlalcfcndffhdipadani?utm_source=item-share-cb).  
-     1B. Unpack the extension using [this extension](https://chromewebstore.google.com/detail/ajkhmmldknmfjnmeedkbkkojgobmljda?utm_source=item-share-cb) or similar, then [repack it into your account as developer](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).
+     1B. Unpack the extension using [this extension](https://chromewebstore.google.com/detail/ajkhmmldknmfjnmeedkbkkojgobmljda?utm_source=item-share-cb) or similar, then [repack it into your account as developer](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).  
+  2. Customize browser extension settings.  
+     2A. Click the extension's action button to open the settings menu.  
+     2B. If you're in need of custom backgrounds, you can download some [here](https://ko-fi.com/i/IP5P31VV2CW).  
 
 ## Additional Information
-**Please read the *Privacy Policy:***  
+**Privacy Policy:**  
 https://dimensionreset.github.io/OBMC-Tweaks/
-
-**If you don't have backgrounds and want to use some pre-made ones, download here:**  
-https://ko-fi.com/i/IP5P31VV2CW
