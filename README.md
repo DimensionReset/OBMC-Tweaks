@@ -11,9 +11,9 @@ Step One Side A is for those who use their personal accounts on the school platf
      2B. If you're in need of custom backgrounds, you can download some [here](https://ko-fi.com/i/IP5P31VV2CW).  
 
 ## Additional Information
-**License**  
+### **License**  
 License under the [MIT](https://github.com/DimensionReset/OBMC-Tweaks/blob/main/LICENSE) license.  
   
-**Privacy Policy**  
+### **Privacy Policy**  
 OBMC Tweaks does not collect or send any personal data to external servers. All data is
 stored locally on your device. View the full privacy policy [here](https://dimensionreset.github.io/OBMC-Tweaks/).
