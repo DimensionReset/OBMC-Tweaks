@@ -28,10 +28,11 @@ the OBMC Tweaks RPC App.
 
 1. Open the "main.js" file in Visual Studio Code or similar.
 2. Open terminal (Ctrl + `).
-3. Run "npm run dist" as administrator.
-  3A. If you do not have NuGet Package Manager installed, please download
+3. Run "npm install" as administrator.
+   3A. If you do not have NuGet Package Manager installed, please download
       it before attempting to run the command.
-4. Open the "dist" folder and do whatever is needed to the exe file that
+4. Run "npm run dist" as administrator.
+5. Open the "dist" folder and do whatever is needed to the exe file that
 was created.
 
 =======================================================================
