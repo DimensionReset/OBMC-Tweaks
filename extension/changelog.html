@@ -1,0 +1,93 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            OBMC Tweaks | Changelog
+        </title>
+
+        <link href="styles/internal.css" rel="stylesheet">
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body data-bs-theme="dark">
+        <div>
+
+            <!-- HEADER -->
+            <div class="container-fluid bg-dark pt-4 border border-5 border-start-0 border-top-0 border-end-0">
+
+                <!-- Title -->
+                <h1 class="text-center container mx-auto mb-2 outlined-text">
+                    <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #0f4c86;" class="display-6 fw-bold">
+                        OBMC
+                    </span> 
+                    <span style="font-family: 'Comic Sans MS', 'cursive';" class="fs-1 fw-bold">
+                        <span style="color: #ef4788;">Tw</span><span style="color: #4bcaf5;">ea</span><span style="color: #fdda5f;;">ks</span>
+                    </span>
+                </h1>
+
+                <!-- Credit -->
+                <h1 class="fs-6 fst-italic text-center text-secondary container mx-auto mt-2">Created by DimensionReset</h1>
+
+                <!-- Version Number -->
+                <h1 class="fs-6 fst-italic text-start text-secondary container m-2">
+                    <a class="extension-version" href="/changelog.html"></a>
+                </h1>
+            </div>
+
+            <!-- Changelog -->
+            <div>
+                <!-- header text -->
+                <h1 class="text-muted fs-4 fw-bold text-center container mx-auto mb-2 mt-3">Changelog</h1>
+                <hr class="w-50 mx-auto">
+
+                <div class="mx-auto w-75">
+                    <div class="mx-auto w-75" id="changelog-content"></div>
+                </div>
+
+                <hr class="w-50 mx-auto">
+            </div>
+
+            <!-- Tutorial -->
+            <div>
+
+                <!-- header text -->
+                <h1 class="text-muted fs-4 fw-bold text-center container mx-auto my-2">Tutorial</h1>
+
+                <br>
+
+                <ol class="w-50 mx-auto">
+                    <li class="fs-5">Click the puzzle piece at the top right of the screen.</li>
+                        <ul>
+                            <li class="text-muted">If you cannot find it, select your profile picture instead and click "extensions".</li>
+                        </ul>
+                    <li class="fs-5">Click on the caterpillar icon to open the extension's settings.</li>
+                        <ul>
+                            <li class="text-muted">If you'd like easier access to the menu, consider pinning the extension to your toolbar using the pin icon.</li>
+                        </ul>
+                    <li class="fs-5"><i>Tweak</i> the values to your liking.</li>
+                        <ul>
+                            <li class="text-muted">These values will save upon closing the page. No need to worry!</li>
+                            <li class="text-muted">If you'd like some background images to use, download some I made <a href="https://ko-fi.com/i/IP5P31VV2CW">here</a>.</li>
+                        </ul>
+                    <li class="fs-5">Open or reload the OB Digital Platform!</li>  
+                </ol>
+
+                <br><p class="text-center text-danger fs-5">(Please note that as of version <span class="extension-version-number"></span>, extensions are sadly not allowed on school accounts.)
+                <br><span class="text-center text-primary fs-6"><a href="https://github.com/DimensionReset/OBMC-Tweaks/releases">Check out the github for more changelog info!</a></span></p>
+                <br>
+            </div>
+        </div>
+
+        <!-- Caterpillar -->
+        <div class="logo-container" id="caterpillar" data-bs-toggle="tooltip"> <!-- hovering over this shows a dialog tooltip -->
+            <img src="images/extension-logo.png" class="logo-img">
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="scripts/internal/caterpillar-handler.js"></script>
+        <script src="scripts/internal/changelog-handler.js"></script>
+    </body>
+</html>

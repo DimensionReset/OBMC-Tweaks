@@ -1,0 +1,90 @@
+{
+    "name": "OBMC Tweaks",
+
+    "description": "Customize the O.B. Digital Platform the way YOU want to!",
+    "version": "1.4",
+    "manifest_version": 3,
+
+    "icons": {
+        "16": "images/extension-logo-16.png",
+        "32": "images/extension-logo-32.png",
+        "48": "images/extension-logo-48.png",
+        "128": "images/extension-logo-128.png"
+    },
+
+    "action": {
+        "default_icon": "images/extension-logo.png"
+    },
+
+    "background": {
+        "service_worker": "scripts/main/background.js"
+    },
+
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/main/global/fastload.js",
+                "scripts/main/global/patch.js",
+                "scripts/main/global/rpc.js",
+
+                "scripts/main/global/style-edit/dark.js",
+                "scripts/main/global/style-edit/font.js",
+                "scripts/main/global/style-edit/accent.js",
+                "scripts/main/global/style-edit/custom-bg.js",
+                "scripts/main/global/style-edit/force-rmb.js",
+                "scripts/main/global/style-edit/soft-corner.js",
+
+                "scripts/main/global/content-edit/anon.js",
+                "scripts/main/global/content-edit/roman.js",
+                "scripts/main/global/content-edit/patriot.js",
+                "scripts/main/global/content-edit/miniplayer.js",
+                "scripts/main/global/content-edit/sidebar-collapse.js",
+
+                "scripts/main/login/auto-login.js",
+
+                "scripts/main/classfeed/class-multiple.js",
+
+                "scripts/main/classlist/class-favs.js",
+                "scripts/main/classlist/class-optimize.js"
+            ],
+
+            "matches": [
+                "https://obmontessorilaspinas.orangeapps.ph/*",
+                "https://obmontessoriangeles.orangeapps.ph/*",
+                "https://obmontessorifairview.orangeapps.ph/*",
+                "https://obmontessorigreenhills.orangeapps.ph/*",
+                "https://obmontessoristaana.orangeapps.ph/*"
+            ],
+
+            "run_at": "document_start"
+        }
+    ],
+
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs",
+        "storage",
+        "notifications",
+        "alarms"
+    ],
+
+    "host_permissions": [
+        "https://obmontessorilaspinas.orangeapps.ph/*",
+        "https://obmontessoriangeles.orangeapps.ph/*",
+        "https://obmontessorifairview.orangeapps.ph/*",
+        "https://obmontessorigreenhills.orangeapps.ph/*",
+        "https://obmontessoristaana.orangeapps.ph/*",
+
+        "https://superduperstarboy221.github.io/Galaxy-Blast-OBMC-Edition-FINAL-/",
+        "https://dimensionreset.github.io/OBMC-Tweaks/online_assets/pages/Eaglercraft.html"
+    ],
+
+    "web_accessible_resources": [
+        {
+            "resources": ["scripts/*", "images/*", "audio/*", "ruleset.json"],
+
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

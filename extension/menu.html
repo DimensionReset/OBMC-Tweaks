@@ -1,0 +1,71 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            OBMC Tweaks | Settings
+        </title>
+
+        <link href="styles/internal.css" rel="stylesheet">
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body data-bs-theme="dark">
+        <div>
+
+            <!-- HEADER -->
+            <div class="container-fluid bg-dark pt-4 border border-5 border-start-0 border-top-0 border-end-0">
+
+                <!-- Title -->
+                <h1 class="text-center container mx-auto mb-2 outlined-text">
+                    <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #0f4c86;" class="display-6 fw-bold">
+                        OBMC
+                    </span> 
+                    <span style="font-family: 'Comic Sans MS', 'cursive';" class="fs-1 fw-bold">
+                        <span style="color: #ef4788;">Tw</span><span style="color: #4bcaf5;">ea</span><span style="color: #fdda5f;;">ks</span>
+                    </span>
+                </h1>
+
+                <!-- Credit -->
+                <h1 class="fs-6 fst-italic text-center text-secondary container mx-auto mt-2">Created by DimensionReset</h1>
+
+                <!-- Version Number -->
+                <h1 class="fs-6 fst-italic text-start text-secondary container m-2">
+                    <a class="extension-version" href="/changelog.html"></a>
+                </h1>
+            </div>
+
+            <!-- Settings -->
+            <div>
+                <!-- header text -->
+                <h1 class="text-muted fs-4 fw-bold text-center container mx-auto mb-2 mt-3">Settings Menu</h1>
+                <hr class="w-50 mx-auto">
+
+                <!-- options will be displayed down here -->
+            </div>
+
+            <!-- Credits -->
+            <div>
+
+                <!-- header text -->
+                <h1 class="text-muted fs-4 fw-bold text-center container mx-auto my-2">Credits</h1>
+
+                <p class="text-center mt-4">
+                    <b><a href="https://ko-fi.com/W7W21VSZ8I">DimensionReset</a></b><br> - Made Almost Everything<br><br> <!-- ako -->
+                    <b>applepi</b><br> - Created Logo (Caterpillar)<br><br> <!-- <3 -->
+                </p>
+            </div>
+        </div>
+
+        <!-- Caterpillar -->
+        <div class="logo-container" id="caterpillar" data-bs-toggle="tooltip"> <!-- hovering over this shows a dialog tooltip -->
+            <img src="images/extension-logo.png" class="logo-img">
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="scripts/internal/settings-handler.js" type="module"></script>
+        <script src="scripts/internal/caterpillar-handler.js"></script>
+    </body>
+</html>
