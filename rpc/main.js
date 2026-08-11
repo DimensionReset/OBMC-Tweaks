@@ -119,7 +119,7 @@ app.whenReady().then(() => {
     host: "127.0.0.1",
     verifyClient: (info, done) => {
       const origin = info.origin || info.req.headers.origin || "";
-      done(origin === "chrome-extension://kjmkcghpbdkokicagpdiamaalcldjckd");
+      done(origin === "chrome-extension://deakjdfjninnhlalcfcndffhdipadani"); // change this for testing purposes
     }
   });
 
