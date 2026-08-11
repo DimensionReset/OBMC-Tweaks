@@ -1,0 +1,282 @@
+{
+  "dependencyTable": {
+    "grayscaleBackground": { "customBackground": true },
+    "blurBackground": { "customBackground": true },
+    "syncFiles": { "classMultiple": true },
+    "accentLink": { "accentColor": true },
+    "RPCTweaksLogo": { "discordRPC": true },
+    "RPCShowActivity": { "discordRPC": true },
+    "RPCShowClassfeed": { "discordRPC": true },
+    "RPCNotifications": { "discordRPC": true },
+    "timedReminder": { "notifToggle": true },
+    "smartImgs": { "fastLoad": true },
+    "keepAnims": { "fastLoad": true },
+    "lowDataMode": { "fastLoad": true },
+    "disguiseMiniplayer": { "defaultMiniplayer": "!none" }
+  },
+
+  "autoLogin": {
+    "Value": false,
+    "Name": "Auto Log-In",
+    "Category": "Utility",
+    "Description": "Automatically enters and submits your credentials upon opening the login page."
+  },
+
+  "anonMode": {
+    "Value": false,
+    "Name": "Anonymous Mode",
+    "Category": "Cosmetic",
+    "Description": "Hides or obfuscates any profile related items."
+  },
+
+  "romanToggle": {
+    "Value": false,
+    "Name": "Roman Numerals",
+    "Category": "Cosmetic",
+    "Description": "Converts all numbers on the page to roman numerals."
+  },
+
+  "discordRPC": {
+    "Value": false,
+    "Name": "Discord Rich Presence",
+    "Category": "Cosmetic",
+    "Description": "Updates your Discord activity to whatever you're doing on the platform. <a href='https://github.com/DimensionReset/OBMC-Tweaks/releases/tag/1.4'>Requires an app download.</a>"
+  },
+
+  "RPCTweaksLogo": {
+    "Value": false,
+    "Name": "Use Tweaks Logo",
+    "Category": "Cosmetic",
+    "Description": "Uses a picture of the OBMC Tweaks mascot for the rich presence instead of the OBMC Butterfly."
+  },
+
+  "RPCShowActivity": {
+    "Value": false,
+    "Name": "Show Activity Name",
+    "Category": "Cosmetic",
+    "Description": "When taking assessments, shows the current activity name instead of the page name."
+  },
+
+  "RPCShowClassfeed": {
+    "Value": false,
+    "Name": "Show Classfeed Name",
+    "Category": "Cosmetic",
+    "Description": "When opening classfeeds, shows the current feed name instead of the page name."
+  },
+
+  "RPCNotifications": {
+    "Value": true,
+    "Name": "App Status Notifications",
+    "Category": "Cosmetic",
+    "Description": "Updates the user when connectivity to their local RPC app changes."
+  },
+
+  "patriotToggle": {
+    "Value": false,
+    "Name": "Enable Nationalism",
+    "Category": "Silly",
+    "Description": "Plays the national anthem of the Philippines."
+  },
+
+  "fastLoad": {
+    "Value": false,
+    "Name": "OB Digi Go Vroom",
+    "Category": "Utility",
+    "Description": "Makes the platform load faster. This is especially noticable when switching pages."
+  },
+
+  "smartImgs": {
+    "Value": true,
+    "Name": "Smart Image Loading",
+    "Category": "Utility",
+    "Description": "Keeping this on allows images to lazy load (only load when they're on screen) and decode asynchronously (render at the same time)."
+  },
+
+  "keepAnims": {
+    "Value": false,
+    "Name": "Keep Loading Animations",
+    "Category": "Utility",
+    "Description": "Animations slightly use GPU power and may cause the platform to feel less snappy."
+  },
+  
+  "lowDataMode": {
+    "Value": false,
+    "Name": "Low Data Mode",
+    "Category": "Utility",
+    "Description": "On slow internet connections, prerendering pages may cause unintended effects. Keep this off otherwise."
+  },
+
+  "notifToggle": {
+    "Value": false,
+    "Name": "Assessment Reminders",
+    "Category": "Utility",
+    "Description": "Reminds you of your pending activities upon opening the browser. Works while on other sites."
+  },
+
+  "timedReminder": {
+    "Type": "slider",
+    "Value": 0,
+    "Name": "Timed Reminder",
+    "Category": "Utility",
+    "Min": 0,
+    "Max": 180,
+    "Description": "Sends you a timed notification (in minutes) based on what you set. Can be disabled when set to 0."
+  },
+
+  "darkToggle": {
+    "Value": false,
+    "Name": "Enable Dark Mode",
+    "Category": "Cosmetic",
+    "Description": "Toggles a custom dark mode theme."
+  },
+
+  "softCorners": {
+    "Value": false,
+    "Name": "Soft Corners",
+    "Category": "Cosmetic",
+    "Description": "Rounds the corners of most container elements."
+  },
+
+  "sidebarToggle": {
+    "Value": false,
+    "Name": "Collapsible Sidebar",
+    "Category": "Cosmetic",
+    "Description": "Adds a button to collapse the platform's main sidebar."
+  },
+
+  "rmbToggle": {
+    "Value": false,
+    "Name": "Force Right Click",
+    "Category": "Utility",
+    "Description": "Forces the platform to allow the right-click menu."
+  },
+
+  "classMultiple": {
+    "Value": false,
+    "Name": "Multiple Feed Tabs",
+    "Category": "Utility",
+    "Description": "Allows multiple classes to be loaded simultaneously without corrupting one another.<br><span class=\"small text-danger\">(Highly experimental. May have limited functionality.)</span>"
+  },
+
+  "syncFiles": {
+    "Value": true,
+    "Name": "Sync Class Files",
+    "Category": "Utility",
+    "Description": "Files from differing classes will be loaded correspondingly via numerous checks which may adversely affect performance.<br><span class=\"small text-danger\">(Results vary based on your device.)</span>"
+  },
+
+  "classFavorites": {
+    "Value": false,
+    "Name": "Class Favorites",
+    "Category": "Utility",
+    "Description": "Allows you to pin classes to the top of your class list."
+  },
+
+  "classListOptimizations": {
+    "Value": false,
+    "Name": "Class List Optimizations",
+    "Category": "Utility",
+    "Description": "Lowers the quality of images within the class list as well as lazy loads them to boost performance on wide screens.<br><span class=\"small text-danger\">(Results vary based on your device.)</span>"
+  },
+  
+  "accentColor": {
+    "Type": "color",
+    "Value": "#039BE5",
+    "Name": "Accent Color",
+    "Category": "Cosmetic",
+    "Description": "Changes the accent colors of the platform to the selected.<br><span class=\"small text-secondary\">(For safety, please disable during assessments.)</span>"
+  },
+
+  "accentLink": {
+    "Value": false,
+    "Name": "Allow Link Accents",
+    "Category": "Cosmetic",
+    "Description": "Allows links to inherit the selected accent color."
+  },
+
+  "customBackground": {
+    "Type": "file",
+    "Value": "",
+    "Name": "Custom Background",
+    "Category": "Cosmetic",
+    "Accept": "image/*",
+    "Description": "Changes the background image of the platform.<br><span class=\"small text-secondary\">(<a href=\"https://ko-fi.com/i/IP5P31VV2CW\">Recommended</a> image size is 16:9)</span>"
+  },
+  
+  "grayscaleBackground": {
+    "Value": false,
+    "Name": "Grayscale Background",
+    "Category": "Cosmetic",
+    "Description": "Dynamically inverts your background's color scheme whenever you switch themes. Intended to be used with grayscale images."
+  },
+
+  "blurBackground": {
+    "Type": "slider",
+    "Value": 0,
+    "Name": "Background Blur",
+    "Category": "Cosmetic",
+    "Min": 0,
+    "Max": 75,
+    "Unit": "px",
+    "Description": "Blurs your selected background from 1px to 100px."
+  },
+
+  "selectedFont": {
+    "Value": "Source Sans Pro, sans-serif",
+    "Name": "Font Select",
+    "Category": "Cosmetic",
+    "Options": [
+      { "label": "DEFAULT (Source Sans Pro)", "value": "Source Sans Pro, sans-serif" },
+      { "label": "Arial", "value": "Arial, sans-serif" },
+      { "label": "Arial Black", "value": "Arial Black, sans-serif" },
+      { "label": "Calibri", "value": "Calibri, sans-serif" },
+      { "label": "Cambria", "value": "Cambria, serif" },
+      { "label": "Candara", "value": "Candara, sans-serif" },
+      { "label": "Century Gothic", "value": "Century Gothic, sans-serif" },
+      { "label": "Comic Sans MS", "value": "Comic Sans MS, cursive" },
+      { "label": "Consolas", "value": "Consolas, monospace" },
+      { "label": "Courier New", "value": "Courier New, monospace" },
+      { "label": "Franklin Gothic Medium", "value": "Franklin Gothic Medium, sans-serif" },
+      { "label": "Garamond", "value": "Garamond, serif" },
+      { "label": "Georgia", "value": "Georgia, serif" },
+      { "label": "Gill Sans", "value": "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" },
+      { "label": "Helvetica", "value": "Helvetica, sans-serif" },
+      { "label": "Impact", "value": "Impact, sans-serif" },
+      { "label": "Lucida Console", "value": "Lucida Console, monospace" },
+      { "label": "Lucida Sans Unicode", "value": "Lucida Sans Unicode, sans-serif" },
+      { "label": "Palatino Linotype", "value": "Palatino Linotype, serif" },
+      { "label": "Segoe UI", "value": "Segoe UI, sans-serif" },
+      { "label": "Tahoma", "value": "Tahoma, sans-serif" },
+      { "label": "Times New Roman", "value": "Times New Roman, serif" },
+      { "label": "Trebuchet MS", "value": "Trebuchet MS, sans-serif" },
+      { "label": "Verdana", "value": "Verdana, sans-serif" },
+      { "label": "Cursive (Generic)", "value": "cursive" },
+      { "label": "Fantasy (Generic)", "value": "fantasy" },
+      { "label": "Monospace (Generic)", "value": "monospace" },
+      { "label": "Sans-serif (Generic)", "value": "sans-serif" },
+      { "label": "Serif (Generic)", "value": "serif" }
+    ],
+    "Description": "Changes the font of the platform to the selected."
+  },
+
+  "defaultMiniplayer": {
+    "Value": "none",
+    "Name": "Miniplayer / Game",
+    "Category": "Silly",
+    "Options": [
+      { "label": "None", "value": "none" },
+      { "label": "Lofi Girl", "value": "lofi" },
+      { "label": "Samir Paul Lofi", "value": "lowfi" },
+      { "label": "Galaxy Blast", "value": "galaxyBlast" },
+      { "label": "Eaglercraft", "value": "eaglercraft" }
+    ],
+    "Description": "Shows a miniplayer that persists throughout the platform.<br><span class=\"small text-secondary\">(For safety, please disable during assessments.)</span><br><br><div class=\"bg-dark bg-opacity-75 rounded w-50 pt-1 pb-1 mx-auto\"><p class=\"fw-bold\">Special Credits:</p><ul class=\"w-100 text-start\"><li><a href=\"https://www.youtube.com/c/LofiGirl\">Lofi Girl</a> - A 24/7 YouTube lofi music stream</li><li><a href=\"https://samir.pages.dev/posts/embed-music/\">Samir Paul Lofi</a> - A free \"lofi\" miniplayer service found while trying to make the previous feature</li><li><a href=\"https://superduperstarboy221.github.io/Galaxy-Blast-OBMC-Edition-FINAL-/\">Galaxy Blast</a> - A Galaga-inspired game made by Starboy221, an OBMC student</li><li><a href=\"https://eaglercraft.com/\">Eaglercraft</a> - A compiled voxel game inspired from Minecraft (1.8) designed to run on Javascript.</li></ul></div>"
+  },
+
+  "disguiseMiniplayer": {
+    "Value": false,
+    "Name": "Disguise Miniplayer as Post",
+    "Category": "Silly",
+    "Description": "Adds a button to posts that lets you duplicate and change its content to contain your miniplayer."
+  }
+}

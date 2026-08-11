@@ -1,0 +1,59 @@
+/* 
+    internal.css || DimensionReset
+
+    handles all extension-limited html
+    pages' css styling
+*/
+
+/* Background stuff is the only thing handled here */
+
+body {
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Gill Sans is the font O.B. uses for many posts */
+
+div {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* The caterpillar is forced to be positioned to the bottom left here */
+
+.logo-container {
+    position: fixed;
+    bottom: -18px;  /* bottom offset from viewport */
+    left: 5%; /* left offset from viewport */
+    transform: translateX(-50%); /*  centered */
+}
+
+/* Fix logo size since absolute values are finnicky */
+
+.logo-img {
+    width: 80px;  /* adjust size */
+    height: auto;
+}
+
+/* Text shadow is used to outline text because it's supposedly safer on more devices */
+
+.outlined-text {
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px  1px 0 #FFF,
+    1px  1px 0 #FFF;
+}
+
+/* Changelog version looks better grey i dont like hyperlink :P */
+
+.extension-version {
+    color: gray;
+    text-decoration-line: none;
+}
+
+.extension-version:hover {
+    color: lightgray;
+    text-decoration-line: none;
+}
