@@ -1,0 +1,52 @@
+{
+  "name": "obmctweaksrpc",
+  "version": "1.0.0",
+  "description": "Discord RPC Bridge for OBMC Tweaks",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.obmctweaks.rpcbridge",
+    "productName": "OBMC Tweaks - RPC Bridge",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "logo.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": false,
+      "shortcutName": "OBMC Tweaks - RPC Bridge"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "ws": "^8.21.3"
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}
