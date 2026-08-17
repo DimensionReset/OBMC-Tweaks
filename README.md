@@ -8,7 +8,8 @@ Before you begin, please note that **Side B** of step one is for those who can't
      1B. Unpack the extension using [**this extension**](https://chromewebstore.google.com/detail/ajkhmmldknmfjnmeedkbkkojgobmljda?utm_source=item-share-cb) or similar, then [repack it into your account as developer](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked).  
   2. Customize browser extension settings.  
      - Click the extension's action button to open the settings menu.  
-     - If you're in need of custom backgrounds, you can download some [**here**](https://ko-fi.com/i/IP5P31VV2CW).  
+     - If you're in need of custom backgrounds, you can download some [**here**](https://ko-fi.com/i/IP5P31VV2CW).
+  3. Download the [**Discord Rich Presence App**](https://github.com/DimensionReset/OBMC-Tweaks/releases/download/1.4/OBMCTweaksRPC1.0.exe) here, available for versions 1.4 and following.
 
 ## Additional Information
 ### **License Details**  
