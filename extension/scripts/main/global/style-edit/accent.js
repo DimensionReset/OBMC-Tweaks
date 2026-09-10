@@ -94,7 +94,7 @@
 				rawHsl = helpers["color-convert"].rgbToHsl(r,g,b);
 
 				newFinal = `hsl(${rawHsl.h} ${rawHsl.s}% ${rawHsl.l}%)`;
-				brightFinal = `hsl(${rawHsl.h} ${rawHsl.s}% ${Math.min(rawHsl.l + 50, 100)}%)`;
+				brightFinal = `hsl(${rawHsl.h} ${Math.min(rawHsl.s + 20, 30)}% ${Math.min(rawHsl.l + 20, 30)}%)`;
 				transparentFinal = `hsl(${rawHsl.h} ${rawHsl.s}% ${rawHsl.l}% / 0.5)`;
 				
                 // selector config
@@ -102,7 +102,8 @@
                 .-event_bg, button.-primary_btn, a.-primary_btn, .-primary_btn, .-primary_btn.-sm, 
                 .-primary_btn.-tiny, .-event_bg, .-light_p_bg, .page-item.active > .page-link,
                 .-tab_card .nav-tabs > li.active > a::after, .-tab_card .nav-tabs > li > a::after,
-                .nav-pills li a:not(a[style="opacity: 0.75;"]), #nprogress .bar
+                .nav-pills li a:not(a[style="opacity: 0.75;"]), #nprogress .bar, .notif-tabs > 
+                button.notif-tab.active, div.-unread::after, a#request_notif
                 `;
 
                 const accentBorderElements = `
@@ -111,8 +112,8 @@
                 .dropdown-toggle:has(.oa_fl_ellipses)
                 `;
 
-                let hoverElements = `button.-primary_btn, a.-primary_btn, .-primary_btn, .-primary_btn.-sm, .-primary_btn.-tiny`;
-                let textElements = `.-show_pass, .-light_p, .page-item:not(.disabled) .page-link, .dropdown-toggle > .oa_fl_ellipses, ul.nav.nav-tabs > li.active > a, .li_breadcrumb, div#home_filter_posts *`;
+                let hoverElements = `button.-primary_btn, a.-primary_btn, .-primary_btn, .-primary_btn.-sm, .-primary_btn.-tiny, nav.sidenav li.-menu.-s > a, .nav.nav-tabs li > a:hover`;
+                let textElements = `.-show_pass, .-light_p, .page-item:not(.disabled) .page-link, .dropdown-toggle > .oa_fl_ellipses, .nav.nav-tabs li.active > a, .li_breadcrumb, div#home_filter_posts *, .navbar-mobile #navbar-title-header`;
                 let hoverTextElements = `.-show_pass, .-light_p, .dropdown-toggle > .oa_fl_ellipses`;
 
                 // main accent styling
@@ -204,12 +205,47 @@
                     }
                 `;
 
+                // ONLY VISIBLE ON MOBILE
+                const mobile_header = document.querySelector(".navbar-mobile #navbar-title-header")
+
+                // fuck orangeapps fuckin stupid hardcoding in the color blue fuckin fuck you
+                if (mobile_header) mobile_header.style.removeProperty("color");
+                // orangeapps trying to piss me off istg
+                
+                //========================//
+
                 document.querySelectorAll(".-sidebar-theme-white").forEach(element => {
                     element.classList.remove("-sidebar-theme-white"); 
                 });
 
+                function applyCallIcon() {
+                    if (colorValue == DEFAULT_SETTINGS.accentColor.Value) return false;
+
+                    const callIcon = document.querySelector("div.-item_links .-tiny_btn.-logs_icon img");
+                    if (!callIcon) return false;
+
+                    const baseHue = 35;
+                    const rotate = rawHsl.h - baseHue;
+
+                    callIcon.style.setProperty(
+                        "filter",
+                        `
+                        invert(1)
+                        sepia(1)
+                        saturate(6000%)
+                        hue-rotate(${rotate}deg)
+                        brightness(95%)
+                        `,
+                        "important"
+                    );
+
+                    return true;
+                }
+
                 function applyContractIcon() {
-                    const contractIcon = document.querySelector("a.-icon_link i img");
+                    if (colorValue == DEFAULT_SETTINGS.accentColor.Value) return false;
+                    
+                    const contractIcon = document.querySelector(".navbar-right a.-icon_link i img");
                     if (!contractIcon) return false;
 
                     const baseHue = 35;
@@ -228,6 +264,13 @@
                     );
 
                     return true;
+                }
+
+                if (!applyCallIcon()) {
+                    const observer = new MutationObserver(() => {
+                        if (applyCallIcon()) observer.disconnect();
+                    }); 
+                    observer.observe(document.documentElement, { childList: true, subtree: true });
                 }
 
                 if (!applyContractIcon()) {
