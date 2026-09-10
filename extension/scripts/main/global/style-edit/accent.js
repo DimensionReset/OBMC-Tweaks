@@ -214,9 +214,21 @@
                 
                 //========================//
 
-                document.querySelectorAll(".-sidebar-theme-white").forEach(element => {
-                    element.classList.remove("-sidebar-theme-white"); 
-                });
+                function removeSidebarUpdate() {
+                    if (document.prerender) {
+                        document.addEventListener("prerenderingchange", () => {
+                            removeSidebarUpdate();
+                        }, { once: true });
+                        return;
+                    }
+
+                    document.querySelectorAll(".-sidebar-theme-white").forEach(element => {
+                        element.classList.remove("-sidebar-theme-white"); 
+                    });
+                }
+
+                removeSidebarUpdate();
+                
 
                 function applyCallIcon() {
                     if (colorValue == DEFAULT_SETTINGS.accentColor.Value) return false;
@@ -266,30 +278,19 @@
                     return true;
                 }
 
-                function setupIconObservers() {
-                    if (document.prerender) {
-                        document.addEventListener("prerenderingchange", () => {
-                            setupIconObservers();
-                        }, { once: true });
-                        return;
-                    }
-
-                    if (!applyCallIcon()) {
-                        const observer = new MutationObserver(() => {
-                            if (applyCallIcon()) observer.disconnect();
-                        }); 
-                        observer.observe(document.documentElement, { childList: true, subtree: true });
-                    }
-
-                    if (!applyContractIcon()) {
-                        const observer = new MutationObserver(() => {
-                            if (applyContractIcon()) observer.disconnect();
-                        }); 
-                        observer.observe(document.documentElement, { childList: true, subtree: true });
-                    }
+                if (!applyCallIcon()) {
+                    const observer = new MutationObserver(() => {
+                        if (applyCallIcon()) observer.disconnect();
+                    }); 
+                    observer.observe(document.documentElement, { childList: true, subtree: true });
                 }
 
-                setupIconObservers();
+                if (!applyContractIcon()) {
+                    const observer = new MutationObserver(() => {
+                        if (applyContractIcon()) observer.disconnect();
+                    }); 
+                    observer.observe(document.documentElement, { childList: true, subtree: true });
+                }
 
                 if (document.head) {
                     document.head.appendChild(style);
