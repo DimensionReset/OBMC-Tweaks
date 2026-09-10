@@ -59,13 +59,15 @@
             await loadPrereq("color-convert");
 
             const DEFAULT_SETTINGS = await (await fetch(chrome.runtime.getURL("scripts/lists/default-settings.json"))).json();
-            const settings = await new Promise(r => chrome.storage.local.get(["accentColor", "darkToggle", "accentLink"], r));
+            const settings = await new Promise(r => chrome.storage.local.get(["accentColor", "darkToggle", "accentLink", "accentSidebar", "revertSidebarUpdate"], r));
 
             const colorValue = settings.accentColor?.Value ?? null;
             const isDark = settings.darkToggle?.Value ?? null;
             const shouldAccentLink = settings.accentLink?.Value ?? null;
+            const shouldAccentSidebar = settings.accentSidebar?.Value ?? null;
+            const shouldRevertUpdate = settings.revertSidebarUpdate?.Value ?? null;
 
-            const isEnabled = (colorValue && (colorValue != DEFAULT_SETTINGS.accentColor.Value));
+            const isEnabled = (colorValue && (colorValue != DEFAULT_SETTINGS.accentColor.Value || shouldRevertUpdate));
 
             if (isEnabled) {
                 const style = document.createElement("style");
@@ -110,7 +112,7 @@
                 `;
 
                 let hoverElements = `button.-primary_btn, a.-primary_btn, .-primary_btn, .-primary_btn.-sm, .-primary_btn.-tiny`;
-                let textElements = `.-show_pass, .-light_p, .page-item:not(.disabled) .page-link, .dropdown-toggle > .oa_fl_ellipses, ul.nav.nav-tabs > li.active > a, .li_breadcrumb`;
+                let textElements = `.-show_pass, .-light_p, .page-item:not(.disabled) .page-link, .dropdown-toggle > .oa_fl_ellipses, ul.nav.nav-tabs > li.active > a, .li_breadcrumb, div#home_filter_posts *`;
                 let hoverTextElements = `.-show_pass, .-light_p, .dropdown-toggle > .oa_fl_ellipses`;
 
                 // main accent styling
@@ -176,6 +178,14 @@
                     }
                 }
 
+                if (shouldAccentSidebar) {
+                    if (!textElements || textElements.endsWith(",")) {
+                        textElements += ` .-sidebar-menu > .-menu-container li i[class^="oa_"].-w, .-sidebar-menu > .-menu-container li i[class*=" oa_"].-w`;
+                    } else {
+                        textElements += `, .-sidebar-menu > .-menu-container li i[class^="oa_"].-w, .-sidebar-menu > .-menu-container li i[class*=" oa_"].-w`;
+                    }
+                }
+
                 style.textContent += `
                     ${textElements} {
                         color: ${originalAccent} !important;
@@ -193,6 +203,10 @@
                         color: ${brightFinal} !important;
                     }
                 `;
+
+                document.querySelectorAll(".-sidebar-theme-white").forEach(element => {
+                    element.classList.remove("-sidebar-theme-white"); 
+                });
 
                 function applyContractIcon() {
                     const contractIcon = document.querySelector("a.-icon_link i img");
