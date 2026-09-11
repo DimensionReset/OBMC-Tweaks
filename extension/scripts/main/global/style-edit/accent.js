@@ -63,8 +63,12 @@
 
             const colorValue = settings.accentColor?.Value ?? null;
             const isDark = settings.darkToggle?.Value ?? null;
+
+            // ON dependencies
             const shouldAccentLink = settings.accentLink?.Value ?? null;
             const shouldAccentSidebar = settings.accentSidebar?.Value ?? null;
+
+            // OFF dependencies
             const shouldRevertUpdate = settings.revertSidebarUpdate?.Value ?? null;
 
             const isEnabled = (colorValue && (colorValue != DEFAULT_SETTINGS.accentColor.Value || shouldRevertUpdate));
@@ -215,20 +219,18 @@
                 //========================//
 
                 function removeSidebarUpdate() {
-                    if (document.prerender) {
-                        document.addEventListener("prerenderingchange", () => {
-                            removeSidebarUpdate();
-                        }, { once: true });
-                        return;
-                    }
-
                     document.querySelectorAll(".-sidebar-theme-white").forEach(element => {
-                        element.classList.remove("-sidebar-theme-white"); 
+                        element.classList.remove("-sidebar-theme-white");
                     });
                 }
 
-                removeSidebarUpdate();
-                
+                if (document.readyState == "complete") {
+                    removeSidebarUpdate();
+                } else {
+                    document.addEventListener("DOMContentLoaded", () => {
+                        removeSidebarUpdate(true);
+                    }, { once: true });
+                } 
 
                 function applyCallIcon() {
                     if (colorValue == DEFAULT_SETTINGS.accentColor.Value) return false;
