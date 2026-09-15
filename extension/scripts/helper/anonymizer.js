@@ -21,6 +21,7 @@ const IMAGE_SELECTOR = `
 `;
 
 const NAME_SELECTORS = [
+    ".form-group.-t_border.-frm_grp.-user p",
     ".nav .dropdown-toggle.-s",
     ".-profile_heading",
     ".-lbl_username",
