@@ -13,6 +13,7 @@ const IMAGE_SELECTOR = `
     .-user_chatbox_image,
     .-user_chat_image,
     .-img_profile,
+    .-comment_image,
     img.-submission_stud_img,
     figure.-post_image_container > img
 `;
@@ -21,6 +22,7 @@ const NAME_SELECTORS = [
     ".nav .dropdown-toggle.-s",
     ".-profile_heading",
     ".-lbl_username",
+    ".-comment_name",
     ".-title.-s",
     ".-student_list p",
     ".-post_name"
