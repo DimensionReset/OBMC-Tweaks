@@ -80,6 +80,13 @@
     "Description": "Plays the national anthem of the Philippines."
   },
 
+  "nativeTweaksButton": {
+    "Value": false,
+    "Name": "Native Settings Button",
+    "Category": "Utility",
+    "Description": "Adds a button in the profile dropdown to let you access OBMC Tweaks in the platform."
+  },
+
   "fastLoad": {
     "Value": false,
     "Name": "OB Digi Go Vroom",

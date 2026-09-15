@@ -38,6 +38,7 @@
                 "scripts/main/global/content-edit/roman.js",
                 "scripts/main/global/content-edit/patriot.js",
                 "scripts/main/global/content-edit/miniplayer.js",
+                "scripts/main/global/content-edit/native-settings.js",
                 "scripts/main/global/content-edit/sidebar-collapse.js",
 
                 "scripts/main/login/auto-login.js",

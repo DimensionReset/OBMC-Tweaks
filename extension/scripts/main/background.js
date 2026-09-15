@@ -57,6 +57,11 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             pingTrayApp((success) => sendResponse({ success }));
             return true;
 
+        case "open_settings":
+            console.log("HEY OPEN RN BITCH")
+            openSettings();
+            break;
+
         default:
             break;
     }
@@ -81,6 +86,19 @@ chrome.notifications.onClicked.addListener((notifId) => {
 });
 
 // ==== HELPER FUNCTIONS ====
+async function openSettings() {
+    const tabs = await chrome.tabs.query({ url: chrome.runtime.getURL("menu.html") });
+
+    if (tabs.length > 0) { // menu already open, do nothing
+        chrome.tabs.update(tabs[0].id, {active: true}); 
+        return;
+    }
+
+    chrome.tabs.create({
+        url: chrome.runtime.getURL("menu.html")
+    });
+}
+
 function connectToTrayApp() {
     chrome.storage.local.get(['discordRPC'], (data) => {
         if (data.discordRPC?.Value !== true) return;
@@ -474,15 +492,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 // when the extension logo is clicked, open the settings
 chrome.action.onClicked.addListener(async () => {
-    const tabs = await chrome.tabs.query({ url: chrome.runtime.getURL("menu.html") });
-    if (tabs.length > 0) { // menu already open, do nothing
-        chrome.tabs.update(tabs[0].id, {active: true}); 
-        return;
-    }
-
-    chrome.tabs.create({
-        url: chrome.runtime.getURL("menu.html")
-    });
+    openSettings();
 });
 
 // when the browser starts, notify activities
