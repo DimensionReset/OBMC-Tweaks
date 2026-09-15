@@ -14,6 +14,7 @@ const IMAGE_SELECTOR = `
     .-user_chat_image,
     .-img_profile,
     .-comment_image,
+    .-notification_image,
     .-write_comment_cont .-img45,
     img.-submission_stud_img,
     figure.-post_image_container > img
@@ -24,6 +25,7 @@ const NAME_SELECTORS = [
     ".-profile_heading",
     ".-lbl_username",
     ".-comment_name",
+    ".-notification_name b",
     ".-title.-s",
     ".-student_list p",
     ".-post_name"
