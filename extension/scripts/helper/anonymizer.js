@@ -25,6 +25,7 @@ const NAME_SELECTORS = [
     ".-profile_heading",
     ".-lbl_username",
     ".-comment_name",
+    ".-all_notification_name b",
     ".-notification_name b",
     ".-title.-s",
     ".-student_list p",
