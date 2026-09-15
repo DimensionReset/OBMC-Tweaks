@@ -14,6 +14,7 @@ const IMAGE_SELECTOR = `
     .-user_chat_image,
     .-img_profile,
     .-comment_image,
+    .-write_comment_cont .-img45,
     img.-submission_stud_img,
     figure.-post_image_container > img
 `;
