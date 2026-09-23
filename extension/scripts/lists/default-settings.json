@@ -4,7 +4,6 @@
     "blurBackground": { "customBackground": true },
     "syncFiles": { "classMultiple": true },
     "accentLink": { "accentColor": "!#039BE5" },
-    "accentSidebar": { "accentColor": "!#039BE5" },
     "revertSidebarUpdate": { "accentColor": "#039BE5" },
     "RPCTweaksLogo": { "discordRPC": true },
     "RPCShowActivity": { "discordRPC": true },
@@ -203,18 +202,11 @@
     "Description": "Allows links to inherit the selected accent color."
   },
 
-  "accentSidebar": {
-    "Value": false,
-    "Name": "Accent Sidebar Icons",
-    "Category": "Cosmetic",
-    "Description": "Allows the sidebar's navigation icons to inherit the selected accent color."
-  },
-
   "revertSidebarUpdate": {
     "Value": false,
     "Name": "Revert Sidebar",
     "Category": "Cosmetic",
-    "Description": "In September of 2026, OrangeApps updated their sidebar icons for future updates. This reverts the change so they go back to being white."
+    "Description": "In September of 2026, OrangeApps updated their sidebar icons for future updates. This reverts the update so sidebar hover effects aren't jarring in dark mode."
   },
 
   "customBackground": {

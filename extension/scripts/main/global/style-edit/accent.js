@@ -66,7 +66,6 @@
 
             // ON dependencies
             const shouldAccentLink = settings.accentLink?.Value ?? null;
-            const shouldAccentSidebar = settings.accentSidebar?.Value ?? null;
 
             // OFF dependencies
             const shouldRevertUpdate = settings.revertSidebarUpdate?.Value ?? null;
@@ -116,9 +115,32 @@
                 .dropdown-toggle:has(.oa_fl_ellipses)
                 `;
 
-                let hoverElements = `button.-primary_btn, a.-primary_btn, .-primary_btn, .-primary_btn.-sm, .-primary_btn.-tiny, nav.sidenav li.-menu.-s > a, .nav.nav-tabs li > a:hover`;
-                let textElements = `.-show_pass, .-light_p, .page-item:not(.disabled) .page-link, .dropdown-toggle > .oa_fl_ellipses, .nav.nav-tabs li.active > a, .li_breadcrumb, div#home_filter_posts *, .navbar-mobile #navbar-title-header`;
-                let hoverTextElements = `.-show_pass, .-light_p, .dropdown-toggle > .oa_fl_ellipses`;
+                let hoverElements = `button.-primary_btn,
+                a.-primary_btn,
+                .-primary_btn,
+                .-primary_btn.-sm,
+                .-primary_btn.-tiny,
+                nav.sidenav li.-menu.-s > a,
+                .nav.nav-tabs li > a:hover
+                `;
+
+                let textElements = `
+                .-show_pass,
+                .-light_p, .page-item:not(.disabled) .page-link,
+                .dropdown-toggle > .oa_fl_ellipses,
+                .nav.nav-tabs li.active > a,
+                .li_breadcrumb, div#home_filter_posts *,
+                .navbar-mobile #navbar-title-header,
+                .-sidebar-menu > .-menu-container li i[class^="oa_"].-w,
+                .-sidebar-menu > .-menu-container li i[class*=" oa_"].-w,
+                .-sidebar-menu > .-menu-container li span.-w
+                `;
+
+                let hoverTextElements = `
+                .-show_pass,
+                .-light_p,
+                .dropdown-toggle > .oa_fl_ellipses
+                `;
 
                 // main accent styling
                 style.textContent = `
@@ -148,8 +170,8 @@
                         box-shadow: inset 4px 0 0 0 ${newFinal} !important;
                     }
 
-                    .-menu-container>li.active>a:active,
-                    .-menu-container>li.active>a:not(:active) {
+                    .-menu-container > li.active > a:active,
+                    .-menu-container > li.active > a:not(:active) {
                         background-color: ${transparentFinal} !important;
                         box-shadow: inset 4px 0 0 0 ${newFinal} !important;
                     }
@@ -180,14 +202,6 @@
                         hoverTextElements += " .-lnk, a .-event_view_more, a:has(.-link), .-link, .-chat_link, .-info";
                     } else {
                         hoverTextElements += ", .-lnk, a .-event_view_more, a:has(.-link), .-link, .-chat_link, .-info";
-                    }
-                }
-
-                if (shouldAccentSidebar) {
-                    if (!textElements || textElements.endsWith(",")) {
-                        textElements += ` .-sidebar-menu > .-menu-container li i[class^="oa_"].-w, .-sidebar-menu > .-menu-container li i[class*=" oa_"].-w`;
-                    } else {
-                        textElements += `, .-sidebar-menu > .-menu-container li i[class^="oa_"].-w, .-sidebar-menu > .-menu-container li i[class*=" oa_"].-w`;
                     }
                 }
 
