@@ -30,6 +30,7 @@
                 iframe.allow = "autoplay";
             }
         },
+
         lowfi: {
             src: "https://samirpaulb.github.io/music/embed",
             width: 300,
@@ -48,11 +49,13 @@
                 iframe.style.borderRadius = "12px";
             }
         },
+
         galaxyBlast: {
             src: "https://superduperstarboy221.github.io/Galaxy-Blast-OBMC-Edition-FINAL-/",
             width: 300,
             height: 240
         },
+
         eaglercraft: {
             src: "https://dimensionreset.github.io/OBMC-Tweaks/online_assets/pages/Eaglercraft.html",
             width: 300,
@@ -63,6 +66,38 @@
                 const focusIframe = () => {
                     iframe.contentWindow?.focus();
                     console.log(`[${fileName}] Eaglercraft focused.`);
+                };
+                iframe.addEventListener('load', focusIframe);
+                iframe.addEventListener('pointerdown', focusIframe);
+            }
+        },
+
+        sans: {
+            src: "https://jcw87.github.io/c2-sans-fight/",
+            width: 640,
+            height: 480,
+            disguisedHeight: "240px",
+            setup: (iframe) => {
+                iframe.id = "tweaks-sans";
+                const focusIframe = () => {
+                    iframe.contentWindow?.focus();
+                    console.log(`[${fileName}] Bad Time Simulator focused.`);
+                };
+                iframe.addEventListener('load', focusIframe);
+                iframe.addEventListener('pointerdown', focusIframe);
+            } 
+        },
+
+        knight: {
+            src: "https://shadowcrystal.dev/DEVICE_KNIGHT/",
+            width: 640,
+            height: 480,
+            disguisedHeight: "240px",
+            setup: (iframe) => {
+                iframe.id = "tweaks-knight";
+                const focusIframe = () => {
+                    iframe.contentWindow?.focus();
+                    console.log(`[${fileName}] DEVICE_KNIGHT focused.`);
                 };
                 iframe.addEventListener('load', focusIframe);
                 iframe.addEventListener('pointerdown', focusIframe);

@@ -283,9 +283,11 @@
       { "label": "Lofi Girl", "value": "lofi" },
       { "label": "Samir Paul Lofi", "value": "lowfi" },
       { "label": "Galaxy Blast", "value": "galaxyBlast" },
-      { "label": "Eaglercraft", "value": "eaglercraft" }
+      { "label": "Eaglercraft", "value": "eaglercraft" },
+      { "label": "DEVICE_KNIGHT", "value": "knight" },
+      { "label": "Bad Time Simulator", "value": "sans" }
     ],
-    "Description": "Shows a miniplayer that persists throughout the platform.<br><span class=\"small text-secondary\">(For safety, please disable during assessments.)</span><br><br><div class=\"bg-dark bg-opacity-75 rounded w-50 pt-1 pb-1 mx-auto\"><p class=\"fw-bold\">Special Credits:</p><ul class=\"w-100 text-start\"><li><a href=\"https://www.youtube.com/c/LofiGirl\">Lofi Girl</a> - A 24/7 YouTube lofi music stream</li><li><a href=\"https://samir.pages.dev/posts/embed-music/\">Samir Paul Lofi</a> - A free \"lofi\" miniplayer service found while trying to make the previous feature</li><li><a href=\"https://superduperstarboy221.github.io/Galaxy-Blast-OBMC-Edition-FINAL-/\">Galaxy Blast</a> - A Galaga-inspired game made by Starboy221, an OBMC student</li><li><a href=\"https://eaglercraft.com/\">Eaglercraft</a> - A compiled voxel game inspired from Minecraft (1.8) designed to run on Javascript.</li></ul></div>"
+    "Description": "Shows a miniplayer that persists throughout the platform.<br><span class=\"small text-secondary\">(For safety, please disable during assessments.)</span><br><br><div class=\"bg-dark bg-opacity-75 rounded w-50 pt-1 pb-1 mx-auto\"><p class=\"fw-bold\">Special Credits:</p><ul class=\"w-100 text-start\"><li><a href=\"https://www.youtube.com/c/LofiGirl\">Lofi Girl</a> - A 24/7 YouTube lofi music stream</li><li><a href=\"https://samir.pages.dev/posts/embed-music/\">Samir Paul Lofi</a> - A free \"lofi\" miniplayer service found while trying to make the previous feature</li><li><a href=\"https://superduperstarboy221.github.io/Galaxy-Blast-OBMC-Edition-FINAL-/\">Galaxy Blast</a> - A Galaga-inspired game made by Starboy221, an OBMC student</li><li><a href=\"https://eaglercraft.com/\">Eaglercraft</a> - A compiled voxel game inspired from Minecraft (1.8) designed to run on Javascript.</li><li><a href=\"https://shadowcrystal.dev/DEVICE_KNIGHT/\">DEVICE_KNIGHT</a> - A frame-accurate browser recreation of the Roaring Knight fight from DELTARUNE Chapter 3.</li><li><a href=\"https://jcw87.github.io/c2-sans-fight/\">Bad Time Simulator</a> - do you wanna have a bad time?</li></ul></div>"
   },
 
   "disguiseMiniplayer": {
