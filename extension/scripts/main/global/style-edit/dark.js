@@ -41,7 +41,7 @@
 					"img",
 					"picture",
 					"iframe",
-					"video",
+					"video:not(:fullscreen):not(:-webkit-full-screen)",
 					"a .-icon_link",
 					".-item_links .-tiny_btn img",
 					"main.-page_wrapper::before",

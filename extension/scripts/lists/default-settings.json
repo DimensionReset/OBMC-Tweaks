@@ -83,7 +83,7 @@
     "Value": false,
     "Name": "Native Settings Button",
     "Category": "Utility",
-    "Description": "Adds a button in the profile dropdown to let you access OBMC Tweaks in the platform."
+    "Description": "Adds a button to the platform's profile dropdown to let you access OBMC Tweaks in the platform."
   },
 
   "fastLoad": {
