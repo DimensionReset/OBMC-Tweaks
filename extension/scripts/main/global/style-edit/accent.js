@@ -244,6 +244,10 @@
                     document.addEventListener("DOMContentLoaded", () => {
                         removeSidebarUpdate(true);
                     }, { once: true });
+
+                    document.addEventListener("load", () => {
+                        removeSidebarUpdate(true);
+                    }, { once: true });
                 } 
 
                 function applyCallIcon() {
