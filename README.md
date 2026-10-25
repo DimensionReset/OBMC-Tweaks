@@ -13,7 +13,7 @@ Before you begin, please note that **Side B** of step one is for those who can't
 
 ## Additional Information
 ### **License Details**  
-OBMC Tweaks is licensed under the [**MIT**](https://github.com/DimensionReset/OBMC-Tweaks/blob/main/LICENSE) license.  
+OBMC Tweaks is licensed under the [**AGPL-3.0**](https://github.com/DimensionReset/OBMC-Tweaks/blob/main/LICENSE) license.  
   
 ### **Privacy Policy**  
 OBMC Tweaks does not collect or send any personal data to external servers. All data is
